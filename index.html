@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechCare | Professional Media Solutions & Digital Marketing</title>
+    <meta
+      name="description"
+      content="TechCare offers professional photo editing, video editing, digital marketing, Google Ads, lead generation, and SEO services. Boost your online presence today."
+    />
+    <meta
+      name="keywords"
+      content="TechCare, photo editing, video editing, digital marketing, SEO services, Google Ads, lead generation, media solutions, content creation"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #284a78;
+        --secondary: #ff0101;
+        --accent: #ff6b6b;
+        --light: #f8f9fa;
+        --dark: #1a365d;
+        --text: #333;
+        --text-light: #6c757d;
+        --white: #ffffff;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: var(--white);
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--secondary);
+        transition: var(--transition);
+      }
+
+      a:hover {
+        color: var(--primary);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--secondary);
+        color: var(--white);
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+        text-align: center;
+      }
+
+      .btn:hover {
+        background-color: var(--primary);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--secondary);
+      }
+
+      /* Header Styles */
+      header {
+        background-color: var(--white);
+        box-shadow: var(--shadow);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: baseline;
+        margin-left: 3px;
+      }
+
+      .logo-img {
+        height: 50px;
+        margin-right: 10px;
+        /* background-color: white; */
+        /* border: solid 1px black; */
+        /* background: ; */
+        width: 50px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .logo-text {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--primary);
+      }
+      .logo-img img {
+        width: 45px;
+        margin-top: 5px;
+      }
+
+      .logo-text span {
+        color: var(--secondary);
+      }
+
+      .logo-subtext {
+        font-size: 12px;
+        color: var(--text-light);
+        display: block;
+        line-height: 1;
+        margin-top: -5px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        color: var(--primary);
+        font-weight: 500;
+        position: relative;
+      }
+
+      nav ul li a:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: var(--secondary);
+        left: 0;
+        bottom: -5px;
+        transition: var(--transition);
+      }
+
+      nav ul li a:hover:after {
+        width: 100%;
+      }
+
+      nav ul li a.active {
+        color: var(--secondary);
+      }
+
+      nav ul li a.active:after {
+        width: 100%;
+      }
+
+      .mobile-menu {
+        display: none;
+        font-size: 24px;
+        margin-right: 5px;
+        cursor: pointer;
+        color: var(--primary);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, #3a6bb3 100%);
+        color: var(--white);
+        padding: 180px 0 100px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        color: var(--light);
+      }
+
+      .hero-btns {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      /* Services Section */
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+      }
+
+      .section-title h2:after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background: var(--secondary);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: var(--white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        text-align: center;
+        padding: 30px 20px;
+        border-top: 4px solid var(--secondary);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        font-size: 50px;
+        color: var(--secondary);
+        margin-bottom: 20px;
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      /* About Section */
+      .about {
+        background-color: var(--light);
+        position: relative;
+      }
+
+      .about::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23284a78" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-image {
+        flex: 1;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+
+      .about-image::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: 10px;
+        bottom: 10px;
+        border: 2px solid var(--secondary);
+        border-radius: 8px;
+        z-index: -1;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Stats Section */
+      .stats {
+        background: linear-gradient(135deg, var(--primary) 0%, #3a6bb3 100%);
+        color: var(--white);
+        text-align: center;
+        padding: 80px 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+
+      .stat-item {
+        padding: 20px;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--white);
+      }
+
+      .stat-text {
+        font-size: 1.1rem;
+        color: var(--light);
+      }
+
+      /* Contact Section */
+      .contact {
+        background-color: var(--light);
+        position: relative;
+      }
+
+      .contact::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ff0101" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .contact h2,
+      .contact h3 {
+        color: var(--primary);
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .contact-icon {
+        font-size: 24px;
+        color: var(--secondary);
+        margin-top: 5px;
+      }
+
+      .contact-form {
+        background: var(--white);
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--primary);
+        font-weight: 500;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Poppins", sans-serif;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        border-color: var(--secondary);
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 1, 1, 0.2);
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 60px 0 30px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-logo {
+        margin-bottom: 20px;
+      }
+
+      .footer-links h3,
+      .footer-services h3,
+      .footer-contact h3 {
+        color: var(--white);
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h3:after,
+      .footer-services h3:after,
+      .footer-contact h3:after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: var(--secondary);
+        bottom: 0;
+        left: 0;
+      }
+
+      .footer-links ul,
+      .footer-services ul {
+        list-style: none;
+      }
+
+      .footer-links ul li,
+      .footer-services ul li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links ul li a,
+      .footer-services ul li a {
+        color: var(--light);
+        transition: var(--transition);
+      }
+
+      .footer-links ul li a:hover,
+      .footer-services ul li a:hover {
+        color: var(--secondary);
+        padding-left: 5px;
+      }
+
+      .footer-contact p {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .footer-contact i {
+        margin-right: 10px;
+        color: var(--secondary);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Floating Contact Buttons */
+      .floating-buttons {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .floating-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 24px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+      }
+
+      .floating-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .whatsapp-btn {
+        background-color: #25d366;
+      }
+
+      .call-btn {
+        background-color: var(--primary);
+      }
+
+      .email-btn {
+        background-color: var(--secondary);
+      }
+
+      /* Services Page Styles */
+      .services-hero {
+        background: linear-gradient(135deg, var(--primary) 0%, #3a6bb3 100%);
+        color: var(--white);
+        padding: 150px 0 80px;
+        text-align: center;
+      }
+
+      .service-detail {
+        padding: 80px 0;
+      }
+
+      .service-detail-content {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        margin-bottom: 80px;
+      }
+
+      .service-detail-content:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .service-detail-text {
+        flex: 1;
+      }
+
+      .service-detail-image {
+        flex: 1;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .service-detail-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .service-features {
+        margin: 30px 0;
+      }
+
+      .service-features ul {
+        list-style: none;
+      }
+
+      .service-features ul li {
+        margin-bottom: 10px;
+        padding-left: 25px;
+        position: relative;
+      }
+
+      .service-features ul li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--secondary);
+        font-weight: bold;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .hero h1 {
+          font-size: 2.8rem;
+        }
+
+        .about-content,
+        .service-detail-content {
+          flex-direction: column;
+        }
+
+        .service-detail-content:nth-child(even) {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          padding: 15px 0;
+        }
+
+        nav {
+          position: fixed;
+          top: 80px;
+          left: -100%;
+          width: 80%;
+          height: calc(100vh - 80px);
+          background: var(--white);
+          box-shadow: var(--shadow);
+          transition: var(--transition);
+          z-index: 999;
+        }
+
+        nav.active {
+          left: 0;
+        }
+
+        nav ul {
+          flex-direction: column;
+          padding: 30px;
+        }
+
+        nav ul li {
+          margin: 0 0 20px 0;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+
+        .hero {
+          padding: 150px 0 80px;
+        }
+
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero-btns {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .section {
+          padding: 80px 0;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .section-title h2 {
+          font-size: 1.8rem;
+        }
+
+        .floating-buttons {
+          right: 15px;
+          bottom: 15px;
+        }
+
+        .floating-btn {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <div class="logo-img"><img src="./techcare.png" alt="" /></div>
+          <div>
+            <div class="logo-text">Tech<span>Care</span></div>
+            <div class="logo-subtext">MEDIA SOLUTIONS</div>
+          </div>
+        </div>
+
+        <div class="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="services.html" class="btn">Our Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Transform Your Digital Presence</h1>
+        <p>
+          TechCare provides professional photo editing, video editing, digital
+          marketing, and SEO services to elevate your brand and drive results.
+        </p>
+        <div class="hero-btns">
+          <a href="#services" class="btn">Our Services</a>
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Comprehensive media solutions to meet all your digital needs</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-camera-retro"></i>
+            </div>
+            <h3>Photo Editing</h3>
+            <p>
+              Professional photo retouching, background removal, color
+              correction, and enhancement services.
+            </p>
+            <a
+              href="services.html#photo-editing"
+              class="btn"
+              style="margin-top: 15px"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3>Video Editing</h3>
+            <p>
+              Creative video editing, motion graphics, color grading, and
+              post-production services.
+            </p>
+            <a
+              href="services.html#video-editing"
+              class="btn"
+              style="margin-top: 15px"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Digital Marketing</h3>
+            <p>
+              Strategic digital marketing campaigns including social media
+              marketing and brand promotion.
+            </p>
+            <a
+              href="services.html#digital-marketing"
+              class="btn"
+              style="margin-top: 15px"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>SEO Services</h3>
+            <p>
+              Comprehensive search engine optimization to improve visibility and
+              drive organic traffic.
+            </p>
+            <a
+              href="services.html#seo-services"
+              class="btn"
+              style="margin-top: 15px"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-ad"></i>
+            </div>
+            <h3>Google Ads</h3>
+            <p>
+              Strategic Google Ads campaigns to reach your target audience and
+              maximize ROI.
+            </p>
+            <a
+              href="services.html#google-ads"
+              class="btn"
+              style="margin-top: 15px"
+              >Learn More</a
+            >
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Lead Generation</h3>
+            <p>
+              Targeted lead generation strategies to connect with potential
+              customers and grow your business.
+            </p>
+            <a
+              href="services.html#lead-generation"
+              class="btn"
+              style="margin-top: 15px"
+              >Learn More</a
+            >
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px">
+          <a href="services.html" class="btn btn-primary">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-text">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-text">Client Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">150+</div>
+            <div class="stat-text">Happy Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-text">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Learn more about our mission and values</p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Your Trusted Media Solutions Partner</h3>
+            <p>
+              At TechCare, we are passionate about helping businesses thrive in
+              the digital landscape. With years of experience in media
+              production and digital marketing, we deliver exceptional results
+              that drive growth and success.
+            </p>
+            <p>
+              Our team of skilled professionals combines creativity with
+              technical expertise to provide comprehensive solutions tailored to
+              your unique needs. Whether you need stunning visual content,
+              effective marketing strategies, or improved online visibility,
+              we've got you covered.
+            </p>
+            <p>
+              We believe in building long-term partnerships with our clients,
+              focusing on understanding their goals and delivering measurable
+              results that exceed expectations.
+            </p>
+            <a href="#contact" class="btn">Work With Us</a>
+          </div>
+
+          <div class="about-image">
+            <!-- Placeholder for about image -->
+            <div
+              style="
+                background: linear-gradient(
+                  135deg,
+                  var(--primary) 0%,
+                  var(--secondary) 100%
+                );
+                width: 100%;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.2rem;
+              "
+            >
+              TechCare Team
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Get in touch to discuss your project</p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Let's Connect</h3>
+            <p>
+              Ready to take your digital presence to the next level? Contact us
+              today for a free consultation.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Our Location</h4>
+                <p>123 Business Avenue, Suite 100<br />New York, NY 10001</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4>Phone Number</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email Address</h4>
+                <p>info@techcare.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  class="form-control"
+                  placeholder="Enter subject"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn" style="width: 100%">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <div class="logo">
+                <div
+                  class="logo-img"
+                  style="width: 40px; height: 40px; font-size: 16px"
+                >
+                  TC
+                </div>
+                <div>
+                  <div class="logo-text" style="color: white">
+                    Tech<span style="color: var(--secondary)">Care</span>
+                  </div>
+                  <div class="logo-subtext">MEDIA SOLUTIONS</div>
+                </div>
+              </div>
+            </div>
+            <p>
+              TechCare is your trusted partner for all digital media and
+              marketing needs. We help businesses grow with professional photo
+              editing, video production, digital marketing, and SEO services.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-services">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="services.html#photo-editing">Photo Editing</a></li>
+              <li><a href="services.html#video-editing">Video Editing</a></li>
+              <li>
+                <a href="services.html#digital-marketing">Digital Marketing</a>
+              </li>
+              <li><a href="services.html#seo-services">SEO Services</a></li>
+              <li><a href="services.html#google-ads">Google Ads</a></li>
+              <li>
+                <a href="services.html#lead-generation">Lead Generation</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Info</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Suite
+              100, NY 10001
+            </p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@techcare.com</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2023 TechCare Media Solutions. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons">
+      <a
+        href="https://wa.me/15551234567"
+        class="floating-btn whatsapp-btn"
+        target="_blank"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="tel:+15551234567" class="floating-btn call-btn">
+        <i class="fas fa-phone"></i>
+      </a>
+      <a href="mailto:info@techcare.com" class="floating-btn email-btn">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <script>
+      // Mobile Menu Toggle
+      document
+        .querySelector(".mobile-menu")
+        .addEventListener("click", function () {
+          document.querySelector("nav").classList.toggle("active");
+        });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.querySelector("nav").classList.remove("active");
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for your message! We will get back to you soon.");
+          this.reset();
+        });
+
+      // Header background on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+          header.style.backdropFilter = "blur(10px)";
+        } else {
+          header.style.backgroundColor = "var(--white)";
+          header.style.backdropFilter = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

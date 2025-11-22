@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | TechCare Media Solutions</title>
+    <meta name="description" content="Explore all TechCare services including photo editing, video editing, digital marketing, SEO, Google Ads, and lead generation.">
+    <meta name="keywords" content="TechCare services, photo editing, video editing, digital marketing, SEO, Google Ads, lead generation">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #284a78;
+            --secondary: #ff0101;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #1a365d;
+            --text: #333;
+            --text-light: #6c757d;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 50px;
+            margin-right: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            width: 50px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        .logo-subtext {
+            font-size: 12px;
+            color: var(--text-light);
+            display: block;
+            line-height: 1;
+            margin-top: -5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--primary);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            left: 0;
+            bottom: -5px;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        nav ul li a.active {
+            color: var(--secondary);
+        }
+        
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Services Hero */
+        .services-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #3a6bb3 100%);
+            color: var(--white);
+            padding: 150px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .services-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .services-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--light);
+        }
+        
+        /* Service Detail Section */
+        .service-detail {
+            padding: 80px 0;
+        }
+        
+        .service-detail-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .service-detail-content:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .service-detail-text {
+            flex: 1;
+        }
+        
+        .service-detail-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .service-detail-image::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid var(--secondary);
+            border-radius: 8px;
+            z-index: -1;
+        }
+        
+        .service-detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .service-features {
+            margin: 30px 0;
+        }
+        
+        .service-features ul {
+            list-style: none;
+        }
+        
+        .service-features ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-features ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #3a6bb3 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--light);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h3, .footer-services h3, .footer-contact h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3:after, .footer-services h3:after, .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links ul, .footer-services ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li, .footer-services ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links ul li a, .footer-services ul li a {
+            color: var(--light);
+            transition: var(--transition);
+        }
+        
+        .footer-links ul li a:hover, .footer-services ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Floating Contact Buttons */
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .floating-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+        
+        .call-btn {
+            background-color: var(--primary);
+        }
+        
+        .email-btn {
+            background-color: var(--secondary);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .service-detail-content {
+                flex-direction: column;
+            }
+            
+            .service-detail-content:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                box-shadow: var(--shadow);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            nav ul li {
+                margin: 0 0 20px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .services-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .services-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .services-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .services-hero p {
+                font-size: 1rem;
+            }
+            
+            .floating-buttons {
+                right: 15px;
+                bottom: 15px;
+            }
+            
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">TC</div>
+                <div>
+                    <div class="logo-text">Tech<span>Care</span></div>
+                    <div class="logo-subtext">MEDIA SOLUTIONS</div>
+                </div>
+            </div>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#contact" class="btn">Get Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="services-hero">
+        <div class="container services-hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive media and marketing solutions tailored to your business needs</p>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-detail">
+        <div class="container">
+            <!-- Photo Editing -->
+            <div class="service-detail-content" id="photo-editing">
+                <div class="service-detail-text">
+                    <h2>Photo Editing</h2>
+                    <p>Transform your images with our professional photo editing services. We enhance your photos to make them visually appealing and impactful for your brand.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Background removal and replacement</li>
+                            <li>Color correction and enhancement</li>
+                            <li>Photo retouching and restoration</li>
+                            <li>Product photo editing for e-commerce</li>
+                            <li>Portrait enhancement and beauty retouching</li>
+                            <li>Creative photo manipulation</li>
+                            <li>Batch processing for large volumes</li>
+                        </ul>
+                    </div>
+                    
+                    <p>Our skilled editors use industry-standard software to deliver high-quality results that meet your specific requirements and deadlines.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Photo Editing Showcase
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Editing -->
+            <div class="service-detail-content" id="video-editing">
+                <div class="service-detail-text">
+                    <h2>Video Editing</h2>
+                    <p>Bring your stories to life with our professional video editing services. We create engaging video content that captures attention and delivers your message effectively.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Professional video editing and post-production</li>
+                            <li>Color grading and correction</li>
+                            <li>Motion graphics and animation</li>
+                            <li>Audio enhancement and sound design</li>
+                            <li>Video compression and format optimization</li>
+                            <li>Corporate videos and promotional content</li>
+                            <li>Social media video optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <p>Our video editors are experts in creating compelling visual narratives that resonate with your target audience and achieve your marketing objectives.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Video Editing Showcase
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing -->
+            <div class="service-detail-content" id="digital-marketing">
+                <div class="service-detail-text">
+                    <h2>Digital Marketing</h2>
+                    <p>Boost your online presence and reach your target audience with our comprehensive digital marketing strategies.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Social media marketing and management</li>
+                            <li>Content marketing strategy and creation</li>
+                            <li>Email marketing campaigns</li>
+                            <li>Influencer marketing partnerships</li>
+                            <li>Brand awareness campaigns</li>
+                            <li>Marketing automation setup</li>
+                            <li>Performance tracking and analytics</li>
+                        </ul>
+                    </div>
+                    
+                    <p>We develop data-driven marketing strategies that align with your business goals and deliver measurable results.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Digital Marketing Strategy
+                    </div>
+                </div>
+            </div>
+            
+            <!-- SEO Services -->
+            <div class="service-detail-content" id="seo-services">
+                <div class="service-detail-text">
+                    <h2>SEO Services</h2>
+                    <p>Improve your website's visibility in search engines and drive qualified organic traffic with our expert SEO services.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Comprehensive SEO audit and analysis</li>
+                            <li>Keyword research and strategy</li>
+                            <li>On-page optimization</li>
+                            <li>Technical SEO improvements</li>
+                            <li>Content strategy and creation</li>
+                            <li>Link building and outreach</li>
+                            <li>Local SEO optimization</li>
+                            <li>Regular performance reporting</li>
+                        </ul>
+                    </div>
+                    
+                    <p>Our SEO experts use white-hat techniques to improve your search rankings and drive sustainable organic growth.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        SEO Analytics Dashboard
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Google Ads -->
+            <div class="service-detail-content" id="google-ads">
+                <div class="service-detail-text">
+                    <h2>Google Ads</h2>
+                    <p>Reach potential customers at the moment they're searching for your products or services with our strategic Google Ads management.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Search campaign setup and optimization</li>
+                            <li>Display network advertising</li>
+                            <li>YouTube video advertising</li>
+                            <li>Shopping campaigns for e-commerce</li>
+                            <li>Remarketing and audience targeting</li>
+                            <li>Conversion tracking setup</li>
+                            <li>A/B testing and performance optimization</li>
+                            <li>Regular campaign analysis and reporting</li>
+                        </ul>
+                    </div>
+                    
+                    <p>We create and manage Google Ads campaigns that maximize your return on investment and drive qualified leads.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Google Ads Performance
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lead Generation -->
+            <div class="service-detail-content" id="lead-generation">
+                <div class="service-detail-text">
+                    <h2>Lead Generation</h2>
+                    <p>Grow your business with a consistent stream of qualified leads through our targeted lead generation strategies.</p>
+                    
+                    <div class="service-features">
+                        <h3>What We Offer:</h3>
+                        <ul>
+                            <li>Target audience identification</li>
+                            <li>Lead magnet creation and optimization</li>
+                            <li>Landing page design and development</li>
+                            <li>Email marketing for lead nurturing</li>
+                            <li>Social media lead generation</li>
+                            <li>Content upgrades and gated content</li>
+                            <li>Lead scoring and qualification</li>
+                            <li>CRM integration and management</li>
+                        </ul>
+                    </div>
+                    
+                    <p>We implement multi-channel lead generation strategies that attract, engage, and convert your ideal customers.</p>
+                    <a href="index.html#contact" class="btn">Get Started</a>
+                </div>
+                
+                <div class="service-detail-image">
+                    <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); width: 100%; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem;">
+                        Lead Generation Funnel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Contact us today to discuss your project and get a customized solution that meets your specific needs and goals.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <div class="logo-img" style="width: 40px; height: 40px; font-size: 16px;">TC</div>
+                            <div>
+                                <div class="logo-text" style="color: white;">Tech<span style="color: var(--secondary);">Care</span></div>
+                                <div class="logo-subtext">MEDIA SOLUTIONS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>TechCare is your trusted partner for all digital media and marketing needs. We help businesses grow with professional photo editing, video production, digital marketing, and SEO services.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#photo-editing">Photo Editing</a></li>
+                        <li><a href="services.html#video-editing">Video Editing</a></li>
+                        <li><a href="services.html#digital-marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#seo-services">SEO Services</a></li>
+                        <li><a href="services.html#google-ads">Google Ads</a></li>
+                        <li><a href="services.html#lead-generation">Lead Generation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Suite 100, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@techcare.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 TechCare Media Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/15551234567" class="floating-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+15551234567" class="floating-btn call-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="mailto:info@techcare.com" class="floating-btn email-btn">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+        
+        // Highlight current service in navigation when scrolled to
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.service-detail-content');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if(window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
